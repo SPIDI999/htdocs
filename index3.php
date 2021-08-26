@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style="background-color:grey;">
  
 <p><h2>Oppgave 2</h2></p>
 <p>a) En kommentar er tekst som du kan skrive mellom linjene til koden, den blir ikke vist på selve nettsiden eks:</p>

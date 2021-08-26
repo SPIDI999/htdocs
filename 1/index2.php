@@ -5,6 +5,23 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Melvin's webside</title>
+	<style>
+	body {
+    background-color: aqua;
+    
+}
+
+h2{
+    color: rgb(183, 0, 255);
+    font-family: monospace;
+}
+
+p{
+    font-style: 10px;
+    font-size: 20px;
+    font-kerning: 40px;
+}
+</style>
 </head>
 
 <body>
