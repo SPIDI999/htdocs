@@ -93,13 +93,11 @@
                 <td>18</td>
                 <td>13</td>
             <tr>
-                
-
             </tr>
         </tbody>
     </table>
 </p>
-<p></p>
+
 
 <a href="index.php">Forside</a>
 

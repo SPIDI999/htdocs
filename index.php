@@ -5,9 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Szymon's webside</title>
+	<link rel="stylesheet" href="Style.css">
 </head>
 
-<body style="background-color: red;">
+<body>
 
 	<h2>Szymon's webside</h2>
 
@@ -21,7 +22,7 @@
 	<a href="1/index2.php">Se Melvin, men mindre</a>
 	
 
-	<p><a herf="https://www.youtube.com/watch?v=8E4MgUvrQtU"/>
+	<p><a herf="https://www.youtube.com/watch?v=8E4MgUvrQtU"></p>
 
 	<a href="index3.php">Deloppgaver</a>
 
