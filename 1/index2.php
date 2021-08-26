@@ -17,6 +17,8 @@
 
 	<a href="../index.php">Se Melvin, men større</a>
 
+	<p>lol</p>
+
 	<ul>
 		<li>Diverse nettsider
 			<ul>
