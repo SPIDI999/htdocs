@@ -1,0 +1,21 @@
+header{
+    background-color: orange;
+    padding: 15px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 20;
+    color: whitesmoke;
+}
+
+nav{
+    float: right;
+    width: 25%;
+    height: 250px;
+    background: #ccc;
+    padding: 20px;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+}
