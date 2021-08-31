@@ -44,6 +44,8 @@ p{
 
 	<p><a href="Layout.php">Layout webside</a></p>
 
+	<p><a href="Oblig 2/index.php">Oblig 2</a></p>
+
 </body>
 
 </html>

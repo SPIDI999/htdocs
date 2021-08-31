@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Style Side, Fin Nettside</title>
+    <title>Document</title>
     <style>
         * {
   box-sizing: border-box;
@@ -50,13 +50,6 @@ section::after {
   clear: both;
 }
 
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
 @media (max-width: 600px) {
 nav, article {
     width: 100%;
@@ -68,36 +61,34 @@ nav, article {
 </head>
 
 
-<body style="background-color:orange;">
-
-<h2>CSS med Melvin</h2>
-<p>Her er dokumentert historien til Melvin</p>
-<p>Les for å bli med til Melvin sine hemmlige rotter</p>
+<body style=background-color:cyan;>
 
 <header>
-  <h2>Melvin</h2>
+  <h2>BMI Kalkulator</h2>
 </header>
 
 <section>
   <nav>
     <ul>
-      <li><a href="Layout.php">Melvin's Historie, Side 1</a></li>
-      <li><a href="Layout3.php">Melvin's Historie, Side 3</a></li>
+      <li><a>Melvin's Historie, Side 1</a></li>
+      <li><a>Melvin's Historie, Side 2</a></li>
     </ul>
   </nav>
   
   <article>
-    <h1>Melvin's Historie, Side 2</h1>
-    <p>Melvin var født uten foreldrene</p>
-    <p>Men likevel er Melvin faren og moren til oss alle</p>
+    <h1>Melvin's Historie, Side 3</h1>
+    <p>Elsk Melvin, for han elsker deg</p>
+    <p>Elsk hverandre, for han elsker dere</p>
   </article>
 </section>
 
-<footer>
-  <p>La Melvin være med deg, Amen.</p>
-</footer>
+<img src="/img/BMI.png" width="832" height="225"/><img src="/img/BMI2.png" width="832" height="225"/>
 
 
-<a href="index.php">Forside</a>    
+
+
+
+
+<h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>
 </body>
 </html>

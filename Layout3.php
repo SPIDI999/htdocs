@@ -39,7 +39,7 @@ nav ul{
 article{
     float: left;
     padding: 20px;
-    width: 60%;
+    width: 75%;
     background-color: #f1f1f1;
     height: 250px;
 }
@@ -57,10 +57,12 @@ footer {
   color: white;
 }
 
+@media (max-width: 600px) {
 nav, article {
     width: 100%;
     height: auto;
   }
+}
 
 </style>
 </head>
