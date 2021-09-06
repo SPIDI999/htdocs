@@ -70,25 +70,61 @@ nav, article {
 <section>
   <nav>
     <ul>
-      <li><a>Melvin's Historie, Side 1</a></li>
-      <li><a>Melvin's Historie, Side 2</a></li>
+      <form action="bmi.php" method="GET">
+      <li><a><input type="radio" name="gender" value="male"> Mann<br></a></li>
+      <li><a><input type="radio" name="gender" value="female"> Dame<br></a></li>
     </ul>
   </nav>
   
   <article>
-    <h1>Melvin's Historie, Side 3</h1>
-    <p>Elsk Melvin, for han elsker deg</p>
-    <p>Elsk hverandre, for han elsker dere</p>
+    <h1>Dine Opplysninger</h1>
+    <p><input type="text" name="name" required> Ditt navn<br></p>
+    <!--Height in meter-->
+    <p><input type="text" name="height" required> Høyde<br></p>
+    <!--Mass in kilogram-->
+    <p><input type="text" name="mass" required> Vekt<br></p>
+    <input type="submit" name="submit" value="Submit">
   </article>
 </section>
 
 <img src="/img/BMI.png" width="832" height="225"/><img src="/img/BMI2.png" width="832" height="225"/>
 
 
-
-
-
-
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>
 </body>
 </html>
+
+
+
+<!--
+
+if (isset($_POST["name"]) && (isset($_POST["height"]) && (isset($_POST["weight"]) && (isset($_POST["gender"])){
+$navn = $_POST["name"];
+$hoyde = $_POST["height"];
+$vekt = $_POST["weight"];
+$kjonn = $_POST["gender"];
+$bmi = $weight / ($height * $height);
+$message = "";
+
+if($bmi < 18.5){
+ $message = "Du er undervektig";
+}
+else if($bmi >=18.5 && $bmi <= 25){
+ $message = "Du har normal vekt";
+}
+else if($bmi >25 && $bmi <=30){
+ $message = "Du er overvektig";
+}
+else{
+ $message = "Fedme";
+}
+
+$output = array(
+  "bmi"=>$bmi,
+  "message"=>$message
+);
+
+
+}
+?>
+-->
