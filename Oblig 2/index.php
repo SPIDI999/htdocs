@@ -70,9 +70,9 @@ nav, article {
 <section>
   <nav>
     <ul>
-      <form action="bmi.php" method="GET">
-      <li><a><input type="radio" name="gender" value="male"> Mann<br></a></li>
-      <li><a><input type="radio" name="gender" value="female"> Dame<br></a></li>
+      <form action="index.php" method="POST">
+      <li><a><input type="radio" Name="gender" value="male"> Mann<br></a></li>
+      <li><a><input type="radio" Name="gender" value="female"> Dame<br></a></li>
     </ul>
   </nav>
   
@@ -82,8 +82,60 @@ nav, article {
     <!--Height in meter-->
     <p><input type="text" name="height" required> Høyde<br></p>
     <!--Mass in kilogram-->
-    <p><input type="text" name="mass" required> Vekt<br></p>
-    <input type="submit" name="submit" value="Submit">
+    <p><input type="text" name="weight" required> Vekt<br></p>
+    <input type="submit" name="submit" value="submit">
+
+    <?php
+
+if (isset($_POST["name"]) && isset($_POST["height"]) && isset($_POST["weight"]) && isset($_POST["gender"])){
+
+    $name = $_POST["name"];
+    $height = $_POST["height"];
+    $weight = $_POST["weight"];
+    $gender = $_POST["gender"];
+    $bmi = $weight / ($height * $height);
+
+if($gender =="male"){
+
+if($bmi < 18.5){
+ echo "$name du ekke en kvinne, spis mer ellers så blir du en pinne";
+}
+
+else if($bmi >=18.5 && $bmi <= 25){
+ echo  "$name du ser greit ut, men du kan bygge mer muskler";
+}
+
+else if($bmi >25 && $bmi <=30){
+ echo  "$name, på tide å ta en eller ti joggeturer";
+}
+
+else{
+ echo  "$name, hvor fort ruller du til skolen?";
+}
+    }
+
+    if($gender =="female"){
+
+        if($bmi < 18.5){
+         echo "$name, du burde ha spist litt mer idag";
+        }
+        
+        else if($bmi >=18.5 && $bmi <= 25){
+         echo  "$name, du har superfin vekt";
+        }
+        
+        else if($bmi >25 && $bmi <=30){
+         echo  "$name, la vare den isen neste gang";
+        }
+        
+        else{
+         echo  "$name, du vil ikke finne deg en mann";
+        }
+            }
+}
+?>
+
+
   </article>
 </section>
 
@@ -93,38 +145,3 @@ nav, article {
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>
 </body>
 </html>
-
-
-
-<!--
-
-if (isset($_POST["name"]) && (isset($_POST["height"]) && (isset($_POST["weight"]) && (isset($_POST["gender"])){
-$navn = $_POST["name"];
-$hoyde = $_POST["height"];
-$vekt = $_POST["weight"];
-$kjonn = $_POST["gender"];
-$bmi = $weight / ($height * $height);
-$message = "";
-
-if($bmi < 18.5){
- $message = "Du er undervektig";
-}
-else if($bmi >=18.5 && $bmi <= 25){
- $message = "Du har normal vekt";
-}
-else if($bmi >25 && $bmi <=30){
- $message = "Du er overvektig";
-}
-else{
- $message = "Fedme";
-}
-
-$output = array(
-  "bmi"=>$bmi,
-  "message"=>$message
-);
-
-
-}
-?>
--->
