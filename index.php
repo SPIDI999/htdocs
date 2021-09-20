@@ -46,6 +46,8 @@ p{
 
 	<p><a href="Oblig 2/index.php">Oblig 2</a></p>
 
+	<p><a href="Oblig 3/index.php">Oblig 3</a></p>
+
 </body>
 
 </html>
