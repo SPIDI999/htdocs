@@ -86,7 +86,6 @@
 
 <h1>Oppgave 4</h1>
     <p>Oppgave a) og b)</p>
-    <div style='float:left; width:25%'>
         <?php
         $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
             foreach($tabell as $indeks => $verdi)
@@ -94,22 +93,107 @@
             echo "$indeks -> $verdi <br/>";
         }
         ?>
-    </div>
 
     <p>Oppgave c)</p>
-        <div style='float:left; width:25%'>
             <?php
             $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
             foreach($tabell as $indeks => $verdi)
             {
             if($verdi<25)
-            echo "$index -> $verdi <br>";
+            echo "$indeks -> $verdi <br>";
             }
             ?>
-        </div>
+
+    <p>Oppgave d)</p>
+            <?php
+            $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
+            foreach($tabell as $indeks => $verdi)
+            {
+            if($verdi>10 && $verdi<40)
+            echo "$indeks -> $verdi <br>";
+            }
+            ?>
+
+    <p>Oppgave e), f), g)</p>
+            <?php
+            $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
+            $antall = 0;
+            $sum = 0;
+            foreach($tabell as $indeks => $verdi){
+                if($verdi>10){
+                    echo "$indeks -> $verdi <br>";                    
+                    $antall++;
+                    $sum += $verdi;
+                }
+            }
+            $gjennomsnitt=$sum/$antall;
+            echo "Antall verdier i array: $antall <br>";
+            echo "Sum av verdiene i array $sum <br>";
+            echo "Gjennomsnitt av verdiene i array $gjennomsnitt <br>";
+            ?>
+
+    <p>Oppgave h)</p>
+            <?php
+            $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
+            foreach($tabell as $indeks => $verdi){
+                if($verdi % 2 == 0){
+                    echo "$indeks -> $verdi <br>";                    
+                }
+            }
+            
+            ?>
+
+    <p>Oppgave i)</p>
+            <?php
+            $tabell = array(1,3,6,9,11,14,16,18,20,22,25,29,31,36,38,39,42,47,49,50);
+            foreach($tabell as $indeks => $verdi){
+                if($verdi % 2 != 0){
+                    echo "$indeks -> $verdi <br>";                    
+                }
+            }
+            ?>
+
+<h1>Oppgave 5</h1>
+    <p>Oppgave a), b) og c)</p>
+            <?php
+            $skole = array(
+                "Elev 1" => array("Navn: " => "Sander", "Etternavn: " => " Karlsen", "Klasse: " => "Klasse: 3DAA", "Karakter: " => "Karakter 5", "Tidsbruk " => "Tid: 2 timer"),
+                "Elev 2" => array("Navn: " => "Linus", "Etternavn: " => " Glynnseth", "Klasse: " => "Klasse: 3DAA", "Karakter: " => "Karakter 3", "Tidsbruk " => "Tid: 3 timer"),
+                "Elev 3" => array("Navn: " => "Sebastian", "Etternavn: " => " Sebsen", "Klasse: " => "Klasse: 3DAA", "Karakter: " => "Karakter 4", "Tidsbruk " => "Tid: 4 timer"),
+                "Elev 4" => array("Navn: " => "Thomas", "Etternavn: " => " Toget", "Klasse: " => "Klasse: 3DAA", "Karakter: " => "Karakter 5", "Tidsbruk " => "Tid: 2 timer"),
+            );
+
+            $skole["Elev 5"] = array("Navn: " => "Maruis", "Etternavn: " => " J.", "Klasse: " => "Klasse: 3DAA", "Karakter: " => "Karakter 6", "Tidsbruk " => "Tid: 10 timer");
+
+            foreach($skole as $indeks => $verdi) {
+                echo $indeks . ": <br>";
+                echo $verdi["Navn: "];
+
+                echo $verdi["Etternavn: "] . "<br>";
+                echo $verdi["Klasse: "] . "<br>";
+                echo $verdi["Karakter: "] . "<br>";
+                echo $verdi["Tidsbruk "] . "<br><br>";
+            }
+            ?>
     
+<h1>Oppgave 6</h1>
+    <p>Oppgave a), b) og c)</p>
 
+    <?php
+    $number = array();
 
+    for($i=0; $i<100; $i++){
+            $number[$i] = rand(0, 1000);
+    }
+    
+    foreach($number as $indeks => $verdi){
+        if ($verdi <500){
+            echo "$indeks -> $verdi <br>";
+        }
+    }
+    
+    
+    ?>
 
 
 
