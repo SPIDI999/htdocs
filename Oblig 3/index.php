@@ -177,7 +177,7 @@
             ?>
     
 <h1>Oppgave 6</h1>
-    <p>Oppgave a), b) og c)</p>
+    <p>Oppgave a), b), c) og d)</p>
 
     <?php
     $number = array();
@@ -185,16 +185,58 @@
     for($i=0; $i<100; $i++){
             $number[$i] = rand(0, 1000);
     }
-    
+    sort($number);
     foreach($number as $indeks => $verdi){
         if ($verdi <500){
             echo "$indeks -> $verdi <br>";
         }
-    }
-    
-    
+    }    
     ?>
 
+<h1>Oppgave 7</h1>
+    <p>Oppgave a), b) og c)</p>
+            <?php
+            $hobby = array(
+                "Parkour" => array("Bruker hele kroppen", "Trenger ikke noe ekstra utstyr","Kan utføren hvor som helst"),
+                "Gaming" => array("Forbedrer øye-hånd koordinasjon", "Gøy", "Skaper nye venner på internett"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+                "Lese bøker" => array("Mye bra informasjon", "Morsome historier", "Bra handling"),
+            );
+
+
+            $size = 0;
+
+            foreach($hobby as $indeks => $verdi) {
+               $size +=count($verdi);
+            }
+
+            echo "<ul>";
+
+            foreach($hobby as $indeks => $value) {
+                echo "<li>$indeks</li>";
+                echo "<ul>";
+
+                echo "<li><b>Egenskaper:</b></li>";
+                echo "<ul>";
+
+                foreach($value as $indeks2 => $value2){
+                    echo "<li>$value2</li>";
+                }
+
+                echo "</ul>";
+                echo "</ul>";
+            }
+
+            echo "</ul>";
+            ?>
+
+    
 
 
 
