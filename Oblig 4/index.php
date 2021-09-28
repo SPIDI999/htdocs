@@ -14,18 +14,26 @@
             <p><input type="text" id="name" name="name" required> Ditt navn<br></p>
             <a><input type="submit" value="submit"></a>
             
-    <ul>  
-        <a><input type="radio" name="antall" value="1"> 1<br></a>
-        <a><input type="radio" name="antall" value="5"> 5<br></a>
-        <a><input type="radio" name="antall" value="10"> 10<br></a>
+    <ul>
+        <label for="antall">Velg antall:</label>  
+            <select id="antall" name="antall">
+                <a><option value="1"> 1</option></a>
+                <a><option value="5"> 5</option></a>
+                <a><option value="10"> 10</option></a>
+            </select>
     </ul>
 
     <?php
 
-        if (isset($_POST["name"])){
+        if (isset($_POST["name"]) && isset($_POST["antall"])){
+
             $name = $_POST["name"];
-            for($i=0; $i <=5; $i++){
-                echo "$name-";
+            $antall = $_POST["antall"];
+        
+        if($antall == "1"){
+            for($i=0; $i <=0; $i++){
+                    echo "$name-";
+                }
             }
         /* Koden til oppgave 1a)
         $name = $_POST["name"];
@@ -34,8 +42,29 @@
         echo "$name-";
         echo "$name-";
         echo "$name-";*/
+
+        if($antall == "5"){
+            for($i=0; $i <=4; $i++){
+                    echo "$name-";
+                }
+            }
+
+        if($antall == "10"){
+            for($i=0; $i <=9; $i++){
+                    echo "$name-";
+                }
+            }
 }
 ?>
+
+<p><?php 
+
+$liste = array("Sander","Linus","Sebastian", "Thomas", "Marius", "Tobias", "Erling", "Luan", "Jovan", "Szymon", "Oscar", "Steinar", "Fredrik");
+sort($liste);
+print_r ($liste);  
+
+
+?></p>
 
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>    
 </body>
