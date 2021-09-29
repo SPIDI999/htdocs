@@ -58,13 +58,17 @@
 ?>
 
 <p><?php 
-
 $liste = array("Sander","Linus","Sebastian", "Thomas", "Marius", "Tobias", "Erling", "Luan", "Jovan", "Szymon", "Oscar", "Steinar", "Fredrik");
-sort($liste);
-print_r ($liste);  
 
-
+for($i=0; $i<13; $i++){
+    echo $liste[$i];
+    echo "<br>";
+}
 ?></p>
+
+
+<h1>Oppgave 6</h1>
+
 
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>    
 </body>
