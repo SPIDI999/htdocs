@@ -30,10 +30,8 @@
             $name = $_POST["name"];
             $antall = $_POST["antall"];
         
-        if($antall == "1"){
-            for($i=0; $i <=0; $i++){
-                    echo "$name-";
-                }
+            for($i=0; $i < $antall; $i++){
+                echo $name . "-";
             }
         /* Koden til oppgave 1a)
         $name = $_POST["name"];
@@ -69,10 +67,10 @@ for($i=0; $i<13; $i++){
 
 <h1>Oppgave 6</h1>
 <form action="index.php" method="post">
-            <input type="text" id="name" name="name"> Navn<br>
+            <input type="text" id="name1" name="name1"> Navn<br>
             <input type="text" id="ad" name="ad"> Adresse<br>
 
-            <a><input type="radio" name="car" value="henting"> Hente selv<br></a>
+            <a><input type="radio" name="car" value="deg på restaurangen"> Hente selv<br></a>
             <a><input type="radio" name="car" value="levering"> Leveranse (+65kr)<br></a>
 
             <ul>
@@ -91,9 +89,9 @@ for($i=0; $i<13; $i++){
 
 <?php 
 
-if (isset($_POST["name"]) && isset($_POST["car"]) && isset($_POST["pizza"]) && isset($_POST["ost"]) && isset($_POST["ad"])){
+if (isset($_POST["name1"]) && isset($_POST["car"]) && isset($_POST["pizza"]) && isset($_POST["ost"]) && isset($_POST["ad"])){
 
-    $name = $_POST["name"];
+    $name = $_POST["name1"];
     $car = $_POST["car"];
     $pizza = $_POST["pizza"];
     $ost = $_POST["ost"];
@@ -101,7 +99,7 @@ if (isset($_POST["name"]) && isset($_POST["car"]) && isset($_POST["pizza"]) && i
 
     echo "Takk for din bestilling, $name <br>";
     echo "Du har valgt $pizza med $ost <br>";
-    echo "Leveres til $ad <br>";
+    echo "Leveres til $car <br>";
 
 }
 
