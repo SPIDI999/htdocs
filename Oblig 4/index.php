@@ -42,13 +42,13 @@
         echo "$name-";*/
 
         if($antall == "5"){
-            for($i=0; $i <=4; $i++){
+            for($i=0; $i <=-1; $i++){
                     echo "$name-";
                 }
             }
 
         if($antall == "10"){
-            for($i=0; $i <=9; $i++){
+            for($i=0; $i <=-1; $i++){
                     echo "$name-";
                 }
             }
