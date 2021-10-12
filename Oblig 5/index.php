@@ -24,16 +24,46 @@
     <?php
     function minFunksjon(){
         echo"Funksjon uten argumenter";
-    }?>
+    }
+    minFunksjon();
+    ?>
 
 <h1>Oppgave 3</h1>
     <?php
-    function minFunksjon($navn){
-        echo""  
+    function navnFunksjon($navn){
+        echo"$navn har opphavsretten til materialet på websiden";
     }
+    navnFunksjon("Szymon");
     ?>
 
+<h1>Oppgave 4</h1>
+    <?php 
+    function dele($tall1, $tall2){
+        return($tall1 / $tall2);
+    };
 
+    function gange($tall1, $tall2){
+        return($tall1 * $tall2);
+    };
+
+    function minus($tall1, $tall2){
+        return($tall1 - $tall2);
+    };
+
+    function plus($tall1, $tall2){
+        return($tall1 + $tall2);
+    }?>
+
+<h1>Oppgave 5</h1>
+    <?php 
+    function inFunksjon($fornavn, $etternavn, $adresse, $tlf){
+        $array = array("fornavn", "etternavn", "adresse", "tlf");
+    }
+    
+    
+    
+    
+    ?>
 
 
 
