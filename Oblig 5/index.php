@@ -56,11 +56,24 @@
 
 <h1>Oppgave 5</h1>
     <?php 
-    function inFunksjon($fornavn, $etternavn, $adresse, $tlf){
-        $array = array("fornavn", "etternavn", "adresse", "tlf");
-    }
-    
-    
+    function nyFunksjon($fornavn, $etternavn, $adresse, $tlf){
+        $array = array("fornavn" => $fornavn, "etternavn" => $etternavn, "adresse" => $adresse, "tlf" => $tlf);
+
+        if (isset($fornavn) && isset($etternavn) && isset($adresse) && isset($tlf)){\
+
+            $fornavn =["fornavn"];
+            $etternavn =["etternavn"];
+            $adresse =["adresse"];
+            $tlf =["tlf"];
+
+            
+
+        print_r($array);
+        }
+    ?>
+
+<h1>Oppgave 6</h1>
+    <?php 
     
     
     ?>
