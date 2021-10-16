@@ -61,10 +61,10 @@
 
         if (isset($fornavn) && isset($etternavn) && isset($adresse) && isset($tlf)){\
 
-            $fornavn =["fornavn"];
-            $etternavn =["etternavn"];
-            $adresse =["adresse"];
-            $tlf =["tlf"];
+            $fornavn = ["fornavn"];
+            $etternavn = ["etternavn"];
+            $adresse = ["adresse"];
+            $tlf = ["tlf"];
 
             
 
