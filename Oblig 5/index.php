@@ -56,24 +56,27 @@
 
 <h1>Oppgave 5</h1>
     <?php 
-    function nyFunksjon($fornavn, $etternavn, $adresse, $tlf){
-        $array = array("fornavn" => $fornavn, "etternavn" => $etternavn, "adresse" => $adresse, "tlf" => $tlf);
-
-        if (isset($fornavn) && isset($etternavn) && isset($adresse) && isset($tlf)){\
-
-            $fornavn = ["fornavn"];
-            $etternavn = ["etternavn"];
-            $adresse = ["adresse"];
-            $tlf = ["tlf"];
-
-            
-
+    function person($fornavn = null, $etternavn = null, $addresse = null, $telefon = null) {
+        $array = array("fornavn" => $fornavn, "etternavn" => $etternavn, "addresse" => $addresse, "telefon" => $telefon);
+        
+        if (!isset($fornavn)) { echo 'Fornavn er ikke definert'; return; }
+        if (!isset($etternavn)) { echo 'Etternavn er ikke definert'; return; } 
+        if (!isset($addresse)) { echo 'Addressen er ikke definert'; return; } 
+        if (!isset($telefon)) { echo 'Telefonnummer er ikke definert'; return; } 
+    
         print_r($array);
-        }
+    }
+    
+    person("Szymon", "Rys", "Rygge", "48666126" );
     ?>
 
 <h1>Oppgave 6</h1>
     <?php 
+    function formatterTekst($formaterTekst){
+        return ucfirst(strtolower(htmlspecialchars(trim($formaterTekst))));
+    };
+
+    echo "<ul>" . formatterTekst("eN EKseMPEL    Pa en TEksT, meD Ting OG TANG") . "</ul>";
     
     
     ?>
