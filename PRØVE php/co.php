@@ -59,17 +59,14 @@ if (isset($_POST["co2"]) && isset($_POST["km"]) && isset($_POST["bil"]) && isset
         return $sum;
     }
 
-    
-
     echo "CO2 regnskap for min bil av typen: $bil <br>";
     $beregning = regnskap($co2, $km);
     $tot = total($co2, $km, $ar);
     echo "Dette året har utslippet vært $beregning, og totalen for alle år er $tot";
-    
-    
-
 }
 ?>
-    
+
+
+
 </body>
 </html>
