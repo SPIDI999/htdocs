@@ -102,11 +102,6 @@ if (isset($_POST["name1"]) && isset($_POST["car"]) && isset($_POST["pizza"]) && 
     echo "Leveres til $car <br>";
 
 }
-
-
-
-
-
 ?>
 
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>    
