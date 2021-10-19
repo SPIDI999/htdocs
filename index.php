@@ -51,6 +51,9 @@ p{
 	<p><a href="Oblig 4/index.php">Oblig 4</a></p>
 
 	<p><a href="Oblig 5/index.php">Oblig 5</a></p>
+
+	<p><a href="Oblig 6/index.php">Oblig 6</a></p>
+</body>
 </body>
 
 </html>
