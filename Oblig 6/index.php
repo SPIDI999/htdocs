@@ -83,38 +83,36 @@ if (isset($_POST["sitat"]) && isset($_POST["navn"])){
 
 <?php 
 $minfil = fopen("tekst.txt", "r") or die("Unable to open file!");
-
 while($linje = fgets($minfil)){
     echo $linje . "<br />";
 }
-
 fclose($minfil);
 ?>
 
+
 <h1>Oppgave 4</h1>
 <form action="index.php" method="post">
-            <input type="text" id="score" name="score" > Ditt score<br>
             <input type="text" id="navn" name="navn" > Navn<br>
+            <input type="text" id="score" name="score" > Ditt score<br>
             <a><input type="submit" value="submit"></a>
 </form>
-<?php 
-if (isset($_POST["score"]) && isset($_POST["navn"])){
 
-    $score = $_POST["score"];
+<?php 
+if (isset($_POST["navn"]) && isset($_POST["score"])){
+
     $navn = $_POST["navn"];
+    $score = $_POST["score"];
 
     $minfil = fopen("opg4.txt", "a") or die("Unable to open file!");
-    $Pnavn = ucfirst(trim($navn));
+    $Pnavn = ucfirst(trim($navn . ";"));
     fwrite($minfil, $Pnavn);
-    $Pscore = ucfirst(trim($score ));
+    $Pscore = ucfirst(trim($score . "<br>"));
     fwrite($minfil, $Pscore);
     fclose($minfil);
 }
 ?>
 
-
-
-
+<p><a href="resultat.php">Resultatsiden</a></p>
 
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>  
 </body>
