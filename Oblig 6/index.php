@@ -90,7 +90,7 @@ fclose($minfil);
 ?>
 
 
-<h1>Oppgave 4</h1>
+<h1>Oppgave 4 a)</h1>
 <form action="index.php" method="post">
             <input type="text" id="navn" name="navn" > Navn<br>
             <input type="text" id="score" name="score" > Ditt score<br>
@@ -106,13 +106,37 @@ if (isset($_POST["navn"]) && isset($_POST["score"])){
     $minfil = fopen("opg4.txt", "a") or die("Unable to open file!");
     $Pnavn = ucfirst(trim($navn . ";"));
     fwrite($minfil, $Pnavn);
-    $Pscore = ucfirst(trim($score . "<br>"));
+    $Pscore = ucfirst($score . "\n");
     fwrite($minfil, $Pscore);
     fclose($minfil);
 }
+
+?>
+<p><a href="resultat.php">Resultatsiden</a></p>
+
+<h1>Oppgave 4 b)</h1>
+<form action="index.php" method="post">
+            <input type="text" id="navn" name="navn" > Navn<br>
+            <input type="text" id="score" name="score" > Ditt score<br>
+            <a><input type="submit" value="submit"></a>
+</form>
+
+
+<?php 
+if (isset($_POST["navn"]) && isset($_POST["score"])){
+    $innavn = $_POST["navn"];
+    $inscore = $_POST["score"] * 1;
+
+    $inpo = fopen("opg4.txt", "a") or die("Unable to open file");
+    $intext = ucfirst("$innavn;$inscore\n");
+    fwrite($inpo, $intext);
+    fclose($inpo);
+
+
+}
 ?>
 
-<p><a href="resultat.php">Resultatsiden</a></p>
+
 
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>  
 </body>
