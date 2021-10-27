@@ -14,8 +14,6 @@
         <th>Navn</th>
         <th>Poeng</th>
 <?php 
-
-
     if(filesize("opg4.txt")> 0){
         $scoreF = fopen("opg4.txt", "r");
         $poengL = 100;  #Lavest
