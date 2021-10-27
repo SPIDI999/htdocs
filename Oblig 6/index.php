@@ -115,7 +115,7 @@ if (isset($_POST["navn"]) && isset($_POST["score"])){
 <p><a href="resultat.php">Resultatsiden</a></p>
 
 <h1>Oppgave 4 b)</h1>
-<form action="index.php" method="post">
+<form action="resultat.php" method="post">
             <input type="text" id="navn" name="navn" > Navn<br>
             <input type="text" id="score" name="score" > Ditt score<br>
             <a><input type="submit" value="submit"></a>
