@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
 <?php 
 class person {
 
+    var $szymon;
+
+    function__construct($szymon_rys) {
+        $this->szymon = $szymon_rys;
+    }
+
+    fuction set_fredrik($fredrik_streng) {
+        $this->fredrik = $fredrik_streng;
+    }
+
+    function get_name() {
+        return $this->name;
+    }
 }
 
 
@@ -18,6 +21,3 @@ class person {
 ?>
 
 
-
-</body>
-</html>
