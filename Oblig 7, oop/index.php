@@ -9,6 +9,7 @@
 
 <body style="background-color:#6A3B3B;">
     
+<?php include("class_lib.php"); ?>
 <h2><p><a href="../index.php">Tilbake til hovedsiden</a></p></h2>  
 </body>
 </html>

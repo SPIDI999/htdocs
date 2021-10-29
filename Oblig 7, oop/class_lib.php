@@ -1,14 +1,9 @@
 <?php 
 class person {
-
     var $szymon;
 
-    function__construct($szymon_rys) {
-        $this->szymon = $szymon_rys;
-    }
-
-    fuction set_fredrik($fredrik_streng) {
-        $this->fredrik = $fredrik_streng;
+    fuction set_name($szymon) {
+        $this->name = $szymon;
     }
 
     function get_name() {
