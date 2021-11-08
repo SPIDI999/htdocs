@@ -54,7 +54,7 @@ p{
 
 	<p><a href="Oblig 6/index.php">Oblig 6</a></p>
 
-	<p><a href="Oblig 7/index.php">Oblig 7</a></p>
+	<p><a href="Oblig 7, oop/index.php">Oblig 7</a></p>
 </body>
 </body>
 
