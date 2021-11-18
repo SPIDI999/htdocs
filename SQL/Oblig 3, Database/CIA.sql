@@ -12,3 +12,8 @@ SELECT * FROM `cia` WHERE `population` = 0;
 SELECT * FROM `cia` WHERE `population` > 15000000;
 SELECT * FROM `cia` WHERE `region` = 'Europe' AND `population` > 15000000;
 SELECT * FROM `cia` WHERE `region` = 'Europe' OR `region` = 'Asia';
+SELECT * FROM `cia` WHERE `name` LIKE 'B%';
+SELECT * FROM `cia` WHERE `name` LIKE '__d%';
+SELECT * FROM `cia` WHERE `name` LIKE '____';
+SELECT * FROM `cia` WHERE `name` LIKE '%United%';
+SELECT * FROM `cia` WHERE `name` LIKE '%ia';
