@@ -20,3 +20,4 @@ SELECT * FROM `cia` WHERE `name` LIKE '%ia';
 SELECT * FROM `cia` ORDER BY `name` DESC;
 SELECT `region` FROM `cia` ORDER BY `name` DESC; ? 
 SELECT * FROM `cia` WHERE `population` > 100000000 ORDER BY `name` DESC;
+SELECT `region`, `population`, `name` FROM `cia` ORDER BY `region`,`population` DESC;
