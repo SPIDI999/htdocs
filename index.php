@@ -55,6 +55,8 @@ p{
 	<p><a href="Oblig 6/index.php">Oblig 6</a></p>
 
 	<p><a href="Oblig 7, oop/index.php">Oblig 7</a></p>
+
+	<p><a href="SQL/Oblig 3, Database/Oppg 8.php">SQL Oppgave 8</a></p>
 </body>
 </body>
 
