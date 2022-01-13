@@ -3,7 +3,7 @@
     "version": "2.2.10",
     "width": 2000,
     "height": 2000,
-    "scrollTop": 0,
+    "scrollTop": -8,
     "scrollLeft": 0,
     "zoomLevel": 1,
     "show": {
@@ -18,8 +18,8 @@
       "relationship": true
     },
     "database": "MySQL",
-    "databaseName": "",
-    "canvasType": "ERD",
+    "databaseName": "test",
+    "canvasType": "@vuerd/builtin-sql-ddl",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
