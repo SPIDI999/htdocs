@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 0,
-    "scrollLeft": -384,
+    "scrollLeft": -12,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -43,7 +43,7 @@
   "table": {
     "tables": [
       {
-        "name": "Ordne",
+        "name": "Tilbud-",
         "comment": "",
         "columns": [
           {
@@ -70,7 +70,7 @@
             "id": "0317f182-d02a-494d-9cf4-372bf251d9d5"
           },
           {
-            "name": "ordrenr",
+            "name": "dato",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -93,9 +93,9 @@
             "id": "e61134e8-ba00-41cf-b5e8-6e8b7cf6f72e"
           },
           {
-            "name": "",
+            "name": "kunde",
             "comment": "",
-            "dataType": "",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -116,9 +116,9 @@
             "id": "a26b2809-d85c-416d-85bd-663e67ffef54"
           },
           {
-            "name": "",
+            "name": "kontaktperson",
             "comment": "",
-            "dataType": "",
+            "dataType": "INT",
             "default": "",
             "option": {
               "autoIncrement": false,
@@ -131,7 +131,7 @@
               "pk": false,
               "fk": false,
               "pfk": false,
-              "widthName": 60,
+              "widthName": 83.66259765625,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -141,9 +141,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1473,
-          "top": 31,
-          "zIndex": 213,
+          "left": 978,
+          "top": 390,
+          "zIndex": 362,
           "widthName": 60,
           "widthComment": 60
         },
@@ -151,7 +151,7 @@
         "id": "9039c828-45c0-4d3b-8506-653ffe46c2d7"
       },
       {
-        "name": "Kunder",
+        "name": "Personer",
         "comment": "Kunder",
         "columns": [
           {
@@ -270,30 +270,7 @@
             "id": "904257e0-f91d-4027-b949-802fd8ed0b6e"
           },
           {
-            "name": "kunde",
-            "comment": "",
-            "dataType": "INT",
-            "default": "",
-            "option": {
-              "autoIncrement": false,
-              "primaryKey": false,
-              "unique": false,
-              "notNull": true
-            },
-            "ui": {
-              "active": false,
-              "pk": false,
-              "fk": true,
-              "pfk": false,
-              "widthName": 60,
-              "widthComment": 60,
-              "widthDataType": 60,
-              "widthDefault": 60
-            },
-            "id": "fd7d6926-321f-40ba-99f9-dbfa0991b733"
-          },
-          {
-            "name": "TSB",
+            "name": "firma",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -318,9 +295,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 522,
+          "left": 520,
           "top": 17,
-          "zIndex": 241,
+          "zIndex": 292,
           "widthName": 60,
           "widthComment": 60
         },
@@ -449,9 +426,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 997,
-          "top": 129,
-          "zIndex": 214,
+          "left": 971,
+          "top": 55,
+          "zIndex": 299,
           "widthName": 60,
           "widthComment": 106.7744140625
         },
@@ -459,8 +436,8 @@
         "id": "02625a65-fe66-4973-84f1-705536e3bd55"
       },
       {
-        "name": "TSB",
-        "comment": "Hoved firmaen",
+        "name": "Firma",
+        "comment": "Alle firma",
         "columns": [
           {
             "name": "id",
@@ -605,9 +582,9 @@
           "active": false,
           "left": 520,
           "top": 392,
-          "zIndex": 233,
+          "zIndex": 274,
           "widthName": 60,
-          "widthComment": 86.5380859375
+          "widthComment": 60
         },
         "visible": true,
         "id": "b60239b3-c514-4a24-97d3-eba01584ea03"
@@ -733,48 +710,22 @@
         "relationshipType": "ZeroOne",
         "startRelationshipType": "Dash",
         "start": {
-          "tableId": "02625a65-fe66-4973-84f1-705536e3bd55",
-          "columnIds": [
-            "1c58b16b-402e-4310-93b7-7bf455aa13fb"
-          ],
-          "x": 997,
-          "y": 214.75,
-          "direction": "left"
-        },
-        "end": {
-          "tableId": "2ee0df0e-e415-4816-a967-393062d46428",
-          "columnIds": [
-            "fd7d6926-321f-40ba-99f9-dbfa0991b733"
-          ],
-          "x": 896.71875,
-          "y": 123.25,
-          "direction": "right"
-        },
-        "constraintName": "fk_befaring_to_kunder",
-        "visible": true,
-        "id": "4e923a1b-b959-4825-b801-3c0c732c8402"
-      },
-      {
-        "identification": false,
-        "relationshipType": "ZeroOne",
-        "startRelationshipType": "Dash",
-        "start": {
           "tableId": "9039c828-45c0-4d3b-8506-653ffe46c2d7",
           "columnIds": [
             "0317f182-d02a-494d-9cf4-372bf251d9d5"
           ],
-          "x": 1473,
-          "y": 106.5,
-          "direction": "left"
+          "x": 1163.331298828125,
+          "y": 390,
+          "direction": "top"
         },
         "end": {
           "tableId": "02625a65-fe66-4973-84f1-705536e3bd55",
           "columnIds": [
             "c4c92854-c6c9-4ccf-be55-596b7a652d72"
           ],
-          "x": 1374.40869140625,
-          "y": 214.75,
-          "direction": "right"
+          "x": 1159.704345703125,
+          "y": 226.5,
+          "direction": "bottom"
         },
         "constraintName": "fk_ordne_to_befaring",
         "visible": true,
@@ -798,8 +749,8 @@
           "columnIds": [
             "a7ee3ac9-8a96-4a15-96f8-f89d7c313f80"
           ],
-          "x": 709.359375,
-          "y": 229.5,
+          "x": 707.359375,
+          "y": 209,
           "direction": "bottom"
         },
         "constraintName": "fk_tsb_to_kunder",
