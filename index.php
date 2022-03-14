@@ -59,6 +59,8 @@ p{
 	<p><a href="SQL/Oblig 3, Database/Oppg 8.php">SQL Oppgave 8</a></p>
 
 	<p><a href="SQL/Oblig 3, Database/Oppg 9.php">SQL Oppgave 9</a></p>
+
+	<p><a href="Busy Project/busy.php">Busy Prosjekt</a></p>
 </body>
 </body>
 

@@ -14,7 +14,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
     
-    header{
+header{
     background-color: gray;
     padding: 15px;
     text-align: center;
