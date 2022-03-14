@@ -4,7 +4,7 @@
     "width": 2000,
     "height": 2000,
     "scrollTop": 0,
-    "scrollLeft": -299,
+    "scrollLeft": -274,
     "zoomLevel": 1,
     "show": {
       "tableComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "MySQL",
     "databaseName": "busy",
-    "canvasType": "ERD",
+    "canvasType": "@vuerd/builtin-sql-ddl",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -189,7 +189,7 @@
           "active": false,
           "left": 336,
           "top": 27,
-          "zIndex": 332,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -343,7 +343,7 @@
           "active": false,
           "left": 595,
           "top": 551,
-          "zIndex": 330,
+          "zIndex": 3,
           "widthName": 60,
           "widthComment": 60
         },
@@ -474,7 +474,7 @@
           "active": false,
           "left": 1262,
           "top": 629,
-          "zIndex": 334,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 115.4326171875
         },
@@ -624,15 +624,15 @@
             "id": "ec274a1e-2409-466b-abf9-eb5ae7bb13f3"
           },
           {
-            "name": "id",
+            "name": "",
             "comment": "",
-            "dataType": "INT",
+            "dataType": "",
             "default": "",
             "option": {
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": true
+              "notNull": false
             },
             "ui": {
               "active": false,
@@ -644,14 +644,14 @@
               "widthDataType": 60,
               "widthDefault": 60
             },
-            "id": "0e0252da-9275-493d-b717-d0362b5216e7"
+            "id": "7cd37325-5d43-4122-8c59-d5cbfb87dbef"
           }
         ],
         "ui": {
           "active": false,
-          "left": 922,
-          "top": 205,
-          "zIndex": 329,
+          "left": 918,
+          "top": 222,
+          "zIndex": 8,
           "widthName": 60,
           "widthComment": 60
         },
@@ -736,7 +736,7 @@
           "active": false,
           "left": 199,
           "top": 648,
-          "zIndex": 290,
+          "zIndex": 1,
           "widthName": 60,
           "widthComment": 60
         },
@@ -890,7 +890,7 @@
           "active": false,
           "left": 1405,
           "top": 28,
-          "zIndex": 333,
+          "zIndex": 6,
           "widthName": 94.47900390625,
           "widthComment": 84.11328125
         },
@@ -975,7 +975,7 @@
           "active": false,
           "left": 203,
           "top": 392,
-          "zIndex": 304,
+          "zIndex": 2,
           "widthName": 60,
           "widthComment": 60
         },
@@ -1083,7 +1083,7 @@
           "active": false,
           "left": 861,
           "top": 0,
-          "zIndex": 331,
+          "zIndex": 4,
           "widthName": 66.54931640625,
           "widthComment": 60
         },
@@ -1159,8 +1159,8 @@
           "columnIds": [
             "d8118abf-6de6-48a1-b42f-bc1b3cfcd6d5"
           ],
-          "x": 1017.7962646484375,
-          "y": 417.5,
+          "x": 1013.7962646484375,
+          "y": 434.5,
           "direction": "bottom"
         },
         "end": {
@@ -1185,8 +1185,8 @@
           "columnIds": [
             "d8118abf-6de6-48a1-b42f-bc1b3cfcd6d5"
           ],
-          "x": 1305.18505859375,
-          "y": 311.25,
+          "x": 1301.18505859375,
+          "y": 328.25,
           "direction": "right"
         },
         "end": {
@@ -1211,8 +1211,8 @@
           "columnIds": [
             "d8118abf-6de6-48a1-b42f-bc1b3cfcd6d5"
           ],
-          "x": 1209.3887939453125,
-          "y": 417.5,
+          "x": 1205.3887939453125,
+          "y": 434.5,
           "direction": "bottom"
         },
         "end": {
@@ -1237,8 +1237,8 @@
           "columnIds": [
             "d8118abf-6de6-48a1-b42f-bc1b3cfcd6d5"
           ],
-          "x": 922,
-          "y": 311.25,
+          "x": 918,
+          "y": 328.25,
           "direction": "left"
         },
         "end": {
