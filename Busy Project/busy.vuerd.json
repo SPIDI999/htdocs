@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -169,
-    "scrollLeft": -590,
-    "zoomLevel": 0.8,
+    "scrollTop": -10,
+    "scrollLeft": -564,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -19,7 +19,7 @@
     },
     "database": "MySQL",
     "databaseName": "busy",
-    "canvasType": "ERD",
+    "canvasType": "@vuerd/builtin-sql-ddl",
     "language": "GraphQL",
     "tableCase": "pascalCase",
     "columnCase": "camelCase",
@@ -189,7 +189,7 @@
           "active": false,
           "left": 336,
           "top": 27,
-          "zIndex": 5,
+          "zIndex": 4,
           "widthName": 60,
           "widthComment": 60
         },
@@ -198,7 +198,7 @@
       },
       {
         "name": "Personer",
-        "comment": "(Kunder)",
+        "comment": "",
         "columns": [
           {
             "name": "id",
@@ -206,7 +206,7 @@
             "dataType": "INT",
             "default": "",
             "option": {
-              "autoIncrement": false,
+              "autoIncrement": true,
               "primaryKey": true,
               "unique": false,
               "notNull": true
@@ -341,9 +341,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 595,
-          "top": 551,
-          "zIndex": 3,
+          "left": 588.75,
+          "top": 548.5,
+          "zIndex": 13,
           "widthName": 60,
           "widthComment": 60
         },
@@ -352,7 +352,7 @@
       },
       {
         "name": "Befaring",
-        "comment": "(Møte med kunden)",
+        "comment": "",
         "columns": [
           {
             "name": "id",
@@ -472,11 +472,11 @@
         ],
         "ui": {
           "active": false,
-          "left": 1262,
+          "left": 1258.25,
           "top": 629,
-          "zIndex": 7,
+          "zIndex": 20,
           "widthName": 60,
-          "widthComment": 115.4326171875
+          "widthComment": 60
         },
         "visible": true,
         "id": "02625a65-fe66-4973-84f1-705536e3bd55"
@@ -491,7 +491,7 @@
             "dataType": "INT",
             "default": "",
             "option": {
-              "autoIncrement": false,
+              "autoIncrement": true,
               "primaryKey": true,
               "unique": false,
               "notNull": true
@@ -651,7 +651,7 @@
           "active": false,
           "left": 918,
           "top": 222,
-          "zIndex": 8,
+          "zIndex": 9,
           "widthName": 60,
           "widthComment": 60
         },
@@ -745,7 +745,7 @@
       },
       {
         "name": "Produktregistrer",
-        "comment": "(Vare register)",
+        "comment": "",
         "columns": [
           {
             "name": "id",
@@ -888,11 +888,11 @@
         ],
         "ui": {
           "active": false,
-          "left": 1405,
+          "left": 1400,
           "top": 28,
-          "zIndex": 6,
+          "zIndex": 17,
           "widthName": 94.47900390625,
-          "widthComment": 84.11328125
+          "widthComment": 60
         },
         "visible": true,
         "id": "9b35ca5f-9164-4076-9b76-7fadc1490eee"
@@ -1083,7 +1083,7 @@
           "active": false,
           "left": 861,
           "top": 0,
-          "zIndex": 4,
+          "zIndex": 3,
           "widthName": 66.54931640625,
           "widthComment": 60
         },
@@ -1168,8 +1168,8 @@
           "columnIds": [
             "44a19a38-0218-48b3-98be-74edde951578"
           ],
-          "x": 969.71875,
-          "y": 647,
+          "x": 963.46875,
+          "y": 644.5,
           "direction": "right"
         },
         "constraintName": "fk_firma_to_personer",
@@ -1194,7 +1194,7 @@
           "columnIds": [
             "16ac373c-69d9-459e-bc4d-9631916fcbe6"
           ],
-          "x": 1405,
+          "x": 1400,
           "y": 172,
           "direction": "left"
         },
@@ -1220,7 +1220,7 @@
           "columnIds": [
             "c6568927-a800-49c8-989e-577e1ca9d3a0"
           ],
-          "x": 1262,
+          "x": 1258.25,
           "y": 714.75,
           "direction": "left"
         },
@@ -1289,7 +1289,7 @@
           "columnIds": [
             "72a0b6ce-3e7d-476f-9dfa-67c4e2ce3ac5"
           ],
-          "x": 1405,
+          "x": 1400,
           "y": 76,
           "direction": "left"
         },
@@ -1315,8 +1315,8 @@
           "columnIds": [
             "3dda5a95-65dc-4a32-9901-547e0f606e90"
           ],
-          "x": 782.359375,
-          "y": 551,
+          "x": 776.109375,
+          "y": 548.5,
           "direction": "top"
         },
         "end": {

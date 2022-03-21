@@ -38,15 +38,61 @@
 
     <section>
         <article>
-            <h1>sdf</h1>
+            <h1>Insert firma</h1>
+            <br>Navn</br>
+            <input type="text" name="navn" required>
+            <br>Adresse</br>
+            <input type="text" name="adresse" required>
+            <br>Organisasjonsnummer</br>
+            <input type="text" name="orgnummer" required>
+            <br>Telefon</br>
+            <input type="text" name="telefon" required>
+            <br>Web</br>
+            <input type="text" name="web" required></br>
+            <input type="submit" name="submit" value="submit">
 
-
-
-
-
-            
+           <!-- <h1>Person</h1>
+            <br>For navn</br>
+            <input type="text" name="fnavn" required>
+            <br>Etter navn</br>
+            <input type="text" name="enavn" required>
+            <br>Telefon Kunde</br>
+            <input type="text" name="telefonk" required>
+            <br>Epost</br>
+            <input type="text" name="epost" required></br>
+            <input type="submit" name="submit" value="submit"> -->
         </article>
     </section>
+
+    <?php
+
+        if (isset($_POST["navn"]) && isset($_POST["adresse"]) && isset($_POST["orgnummer"]) && isset($_POST["telefon"]) && isset($_POST["web"])){
+
+            
+            $navn = $_POST["navn"];             echo $navn;
+            $adresse = $_POST["adresse"];       echo $adresse;
+            $orgnummer = $_POST["orgnummer"];   echo $orgnummer;
+            $telefon = $_POST["telefon"];       echo $telefon;
+            $web = $_POST["web"];               echo $web;
+            }
+
+      $sql = insert into firma(navn, adresse, orgnummer, telefon,web) values(); 
+
+
+
+
+
+    /*$mysqli = new mysqli("localhost","root","","tsb");
+
+    // Check connection
+    if ($mysqli -> connect_errno) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();}*/
+  
+
+
+
+    ?>
 
 
 </body>
