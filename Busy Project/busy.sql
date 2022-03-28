@@ -1,14 +1,15 @@
 mysql --user=root --password=
-create database TSB;
-use TSB;
+create database tsb;
+use tsb;
 
-CREATE TABLE Firma(
-  id        INT         NOT NULL AUTO_INCREMENT,
-  navn      VARCHAR(60) NULL    ,
-  adresse   VARCHAR(60) NULL    ,
-  orgnummer VARCHAR(60) NULL    ,
-  telefon   VARCHAR(60) NULL    ,
-  web       VARCHAR(60) NULL    ,
+CREATE TABLE Firma
+(
+  id         INT         NOT NULL AUTO_INCREMENT,
+  navn       VARCHAR(60) NULL    ,
+  adresse    VARCHAR(60) NULL    ,
+  orgnummer  VARCHAR(60) NULL    ,
+  telefon    VARCHAR(60) NULL    ,
+  postnummer VARCHAR(60) NULL    ,
   PRIMARY KEY (id)
 );
 
@@ -19,11 +20,11 @@ CREATE TABLE Personer
   etternavn VARCHAR(60) NULL    ,
   telefon   VARCHAR(60) NULL    ,
   epost     VARCHAR(60) NULL    ,
-  firma_id  INT         NOT NULL,
+  firma_id  INT         NULL    ,
   PRIMARY KEY (id)
-  );
+);
 
-  ALTER TABLE Personer
+ ALTER TABLE Personer
   ADD CONSTRAINT FK_Firma_TO_Personer
     FOREIGN KEY (firma_id)
     REFERENCES Firma (id);
