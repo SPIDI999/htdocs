@@ -59,7 +59,9 @@
         exit();}
     }
     
-    $result = $mysqli->query('select * from firma where ');
+    $result = $mysqli->query('select * from firma where navn like "%' .$firmanavn. '%" order by navn');
+
+    
     //HERE BITCHES
 
     
