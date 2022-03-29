@@ -48,7 +48,7 @@
             <br>Telefon Kunde</br>
             <input type="text" name="telefon" required>
             <br>Epost</br>
-            <input type="text" name="epost" required>
+            <input type="text" name="epost" required></br>
             <!--<br>FirmaID</br>
             <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
@@ -67,7 +67,7 @@
         #$firma_id = $_POST["firma_id"];     echo $firma_id . " ";
 
             $mysqli = new mysqli("localhost","root","","tsb");
-            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost, firma_id) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'")';
+            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'")';
 
             $result = $mysqli->query($personer);
 

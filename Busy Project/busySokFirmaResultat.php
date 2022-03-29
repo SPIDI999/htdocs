@@ -53,17 +53,21 @@
     $firmanavn = $_POST["firmanavn"];
     $mysqli = new mysqli("localhost","root","","tsb");
 
+    
+    
+    $result = $mysqli->query("select * from firma where navn like '%{$firmanavn}%' order by navn");
+
+    while($row = $result->fetch_assoc()){
+        echo " ";
+        echo "Orgnummer: ", $row["orgnummer"], "<br>", "Firmanavn: ", $row["navn"], "<br>", "Adresse: ", $row["adresse"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Postnummer: ", $row["postnummer"], "<br>";
+    }
+    //HERE BITCHES
+
     // Check connection
     if ($mysqli -> connect_error) {
         echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-        exit();}
+        exit();
     }
-    
-    $result = $mysqli->query('select * from firma where navn like "%' .$firmanavn. '%" order by navn');
-
-    
-    //HERE BITCHES
-
     
     ?>
     

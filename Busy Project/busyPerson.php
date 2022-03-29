@@ -49,9 +49,9 @@
             <br>Telefon Kunde</br>
             <input type="text" name="telefon" required>
             <br>Epost</br>
-            <input type="text" name="epost" required>
-            <br>FirmaID</br>
-            <input type="text" name="firmaid" required></br>
+            <input type="text" name="epost" required></br>
+            <!--<br>FirmaID</br>
+            <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
         </article>
     </section>
