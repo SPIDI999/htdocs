@@ -35,12 +35,11 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyFirma.php">Insert Firma</a>
-        <a href="busySokFirma.php">Finn firmaen din</a>
     </header>
 
     <section>
         <article>
-            <form action="busyPersonResultat.php" method="POST">
+            <form action="busyPerson.php" method="POST">
             <h1>Legg til dine personalia</h1>
             <br>Fornavn</br>
             <input type="text" name="fornavn" required>
@@ -56,7 +55,36 @@
         </article>
     </section>
 
+    <br><?php
+
+        if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"]) && isset($_POST["firma_id"])){
+
+            
+        $fornavn = $_POST["fornavn"];       echo $fornavn . " ";
+        $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
+        $telefon = $_POST["telefon"];       echo $telefon . ", ";
+        $epost = $_POST["epost"];           echo $epost . ", ";
+        $firma_id = $_POST["firma_id"];     echo $firma_id . " ";
+
+            $mysqli = new mysqli("localhost","root","","tsb");
+            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost, firma_id) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'", "'.$firma_id'")';
+
+            $result = $mysqli->query($personer);
+
+        // Check connection
+        if ($mysqli -> connect_error) {
+            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+            exit();}
+
+        }
+
+     
+
+
     
+    
+
+    ?></br>
 
 
 </body>

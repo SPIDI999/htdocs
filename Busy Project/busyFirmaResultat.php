@@ -35,13 +35,12 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyPerson.php">Insert Person</a>
-        <a href="busySokFirma.php">Finn firmaen din</a>
     </header>
 
     <section>
         <article>
             <form action="busyFirmaResultat.php" method="POST">
-            <h1>Legg til dine firma-personalia </h1>
+            <h1>Insert firma</h1>
             <br>Firma Navn</br>
             <input type="text" name="navn" required>
             <br>Adresse</br>
@@ -50,13 +49,42 @@
             <input type="text" name="orgnummer" required>
             <br>Telefon</br>
             <input type="text" name="telefon" required>
-            <br>Epost</br>
+            <br>Postnummer</br>
             <input type="text" name="postnummer" required></br>
             <input type="submit" name="submit" value="Send inn">
         </article>
     </section>
 
+    <br><?php
+
+        if (isset($_POST["navn"]) && isset($_POST["adresse"]) && isset($_POST["orgnummer"]) && isset($_POST["telefon"]) && isset($_POST["postnummer"])){
+
+            
+        $navn = $_POST["navn"];             echo $navn . ", ";
+        $adresse = $_POST["adresse"];       echo $adresse . ", ";
+        $orgnummer = $_POST["orgnummer"];   echo $orgnummer . ", ";
+        $telefon = $_POST["telefon"];       echo $telefon . ", ";
+        $postnummer = $_POST["postnummer"]; echo $postnummer . " ";
+
+            $mysqli = new mysqli("localhost","root","","tsb");
+            $firma = 'INSERT INTO firma (navn, adresse, orgnummer, telefon, postnummer) VALUES("'.$navn.'","'.$adresse.'","'.$orgnummer.'","'.$telefon.'","'.$postnummer.'")';
+
+            $result = $mysqli->query($firma);
+
+        // Check connection
+        if ($mysqli -> connect_error) {
+            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+            exit();}
+
+        }
+
+     
+
+
     
+    
+
+    ?></br>
 
 
 </body>

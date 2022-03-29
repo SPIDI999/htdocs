@@ -35,27 +35,34 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyPerson.php">Insert Person</a>
-        <a href="busySokFirma.php">Finn firmaen din</a>
+        <a href="busyFirma.php">Insert Firma</a>
     </header>
 
     <section>
         <article>
-            <form action="busyFirmaResultat.php" method="POST">
-            <h1>Legg til dine firma-personalia </h1>
-            <br>Firma Navn</br>
-            <input type="text" name="navn" required>
-            <br>Adresse</br>
-            <input type="text" name="adresse" required>
-            <br>Organisasjonsnummer</br>
-            <input type="text" name="orgnummer" required>
-            <br>Telefon</br>
-            <input type="text" name="telefon" required>
-            <br>Epost</br>
-            <input type="text" name="postnummer" required></br>
+            <form action="busySokFirmaResultat.php" method="POST">
+            <h1>Finn firmaen din </h1>
+            <input type="text" name="firmanavn" required>
             <input type="submit" name="submit" value="Send inn">
         </article>
     </section>
 
+
+    <?php
+    
+    $firmanavn = $_POST["firmanavn"];
+    $mysqli = new mysqli("localhost","root","","tsb");
+
+    // Check connection
+    if ($mysqli -> connect_error) {
+        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+        exit();}
+    }
+    
+    
+
+    
+    ?>
     
 
 
