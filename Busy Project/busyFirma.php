@@ -51,7 +51,7 @@
             <input type="text" name="telefon" required>
             <br>Postnummer</br>
             <input type="text" name="postnummer" required></br>
-            <input type="submit" name="submit" value="submit">
+            <input type="submit" name="Send inn" value="submit">
         </article>
     </section>
 

@@ -51,7 +51,7 @@
             <input type="text" name="epost" required></br>
             <!--<br>FirmaID</br>
             <input type="text" name="firmaid" required></br>-->
-            <input type="submit" name="submit" value="submit"> 
+            <input type="submit" name="Send inn" value="submit"> 
         </article>
     </section>
 
