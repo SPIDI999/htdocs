@@ -59,6 +59,7 @@
         exit();}
     }
     
+    $result = $mysqli->query('select * from firma where ');
     //HERE BITCHES
 
     
