@@ -35,6 +35,8 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyPerson.php">Insert Person</a>
+        <a href="busySokFirma.php">Søk Firma</a>
+        <a href="busySokPerson.php">Søk Person</a>
     </header>
 
     <section>

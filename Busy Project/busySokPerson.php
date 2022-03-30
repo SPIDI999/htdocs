@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Søk Firma</title>
+    <title>Busy Project, Søk person</title>
 
     <style>
 
@@ -35,15 +35,15 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyPerson.php">Insert Person</a>
-        <a href="busyFirma.php">Søk Firma</a>
-        <a href="busySokPerson.php">Søk Person</a>
+        <a href="busyFirma.php">Insert Firma</a>
+        <a href="busySokFirma.php">Søk Firma</a>
     </header>
 
     <section>
         <article>
-            <form action="busySokFirmaResultat.php" method="POST">
-            <h1>Finn firmaen din </h1>
-            <input type="text" name="firmanavn" required>
+            <form action="busySokPersonResultat.php" method="POST">
+            <h1>Finn personen</h1>
+            <input type="text" name="personnavn" required>
             <input type="submit" name="submit" value="Søk">
         </article>
     </section>
