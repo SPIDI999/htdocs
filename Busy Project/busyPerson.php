@@ -35,7 +35,8 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyFirma.php">Insert Firma</a>
-        <a href="busySokFirma.php">Finn firmaen din</a>
+        <a href="busySokFirma.php">Søk Firma</a>
+        <a href="busySokPerson.php">Søk Person</a>
     </header>
 
     <section>
@@ -49,9 +50,9 @@
             <br>Telefon Kunde</br>
             <input type="text" name="telefon" required>
             <br>Epost</br>
-            <input type="text" name="epost" required>
-            <br>FirmaID</br>
-            <input type="text" name="firmaid" required></br>
+            <input type="text" name="epost" required></br>
+            <!--<br>FirmaID</br>
+            <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
         </article>
     </section>

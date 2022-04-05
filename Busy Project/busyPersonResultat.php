@@ -35,6 +35,8 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyFirma.php">Insert Firma</a>
+        <a href="busySokFirma.php">Søk Firma</a>
+        <a href="busySokPerson.php">Søk Person</a>
     </header>
 
     <section>
@@ -48,26 +50,26 @@
             <br>Telefon Kunde</br>
             <input type="text" name="telefon" required>
             <br>Epost</br>
-            <input type="text" name="epost" required>
-            <br>FirmaID</br>
-            <input type="text" name="firmaid" required></br>
+            <input type="text" name="epost" required></br>
+            <!--<br>FirmaID</br>
+            <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
         </article>
     </section>
 
     <br><?php
 
-        if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"]) && isset($_POST["firma_id"])){
+        if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"])){
 
             
         $fornavn = $_POST["fornavn"];       echo $fornavn . " ";
         $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
         $telefon = $_POST["telefon"];       echo $telefon . ", ";
         $epost = $_POST["epost"];           echo $epost . ", ";
-        $firma_id = $_POST["firma_id"];     echo $firma_id . " ";
+        #$firma_id = $_POST["firma_id"];     echo $firma_id . " ";
 
             $mysqli = new mysqli("localhost","root","","tsb");
-            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost, firma_id) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'", "'.$firma_id'")';
+            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'")';
 
             $result = $mysqli->query($personer);
 

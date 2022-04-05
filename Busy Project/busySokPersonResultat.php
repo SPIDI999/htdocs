@@ -41,28 +41,27 @@
 
     <section>
         <article>
-            <form action="busySokFirmaResultat.php" method="POST">
-            <h1>Finn firmaen din </h1>
-            <input type="text" name="firmanavn" required>
+            <form action="busySokPersonResultat.php" method="POST">
+            <h1>Finn personen</h1>
+            <input type="text" name="personnavn" required>
             <input type="submit" name="submit" value="Søk">
         </article>
     </section>
 
 
     <br><?php
-    
-    $firmanavn = $_POST["firmanavn"];
+    $personnavn = $_POST["personnavn"];
     $mysqli = new mysqli("localhost","root","","tsb");
 
     
     
-    $result = $mysqli->query("select * from firma where navn like '%{$firmanavn}%' order by navn");
+    $result = $mysqli->query("select * from personer where fornavn like '%{$personnavn}%' order by fornavn");
 
     while($row = $result->fetch_assoc()){
         echo " ";
-        echo "Orgnummer: ", $row["orgnummer"], "<br>", "Firmanavn: ", $row["navn"], "<br>", "Adresse: ", $row["adresse"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Postnummer: ", $row["postnummer"], "<br>";
+        echo "FirmaID: ", $row["firma_id"], "<br>", "Fornavn: ", $row["fornavn"], "<br>", "Etternavn: ", $row["etternavn"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Epost: ", $row["epost"], "<br>";
     }
-    
+    //HERE BITCHES
 
     // Check connection
     if ($mysqli -> connect_error) {
@@ -70,11 +69,7 @@
         exit();
     }
     
-    $result = $mysqli->query('select * from firma where ');
-    
-
-    
-    ?>
+    ?></br>
     
 
 
