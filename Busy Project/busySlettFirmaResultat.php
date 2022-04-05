@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Søk Firma</title>
+    <title>Busy Project, Slett Firma</title>
 
     <style>
 
@@ -37,16 +37,15 @@
         <a href="busyPerson.php">Insert Person</a>
         <a href="busyFirma.php">Insert Firma</a>
         <a href="busySokFirma.php">Søk Firma</a>
-        <a href="busySlettFirma.php">Slett Firma</a>
         <a href="busySlettPerson.php">Slett Person</a>
     </header>
 
     <section>
         <article>
-            <form action="busySokFirmaResultat.php" method="POST">
-            <h1>Finn firmaen din </h1>
-            <input type="text" name="firmanavn" required>
-            <input type="submit" name="submit" value="Søk">
+            <form action="busySlettFirmaResultat.php" method="POST">
+            <h1>Slett firmaen din </h1>
+            <input type="text" name="firmanavn">
+            <input type="submit" name="submit" value="Slett">
         </article>
     </section>
 
@@ -56,15 +55,15 @@
     $firmanavn = $_POST["firmanavn"];
     $mysqli = new mysqli("localhost","root","","tsb");
 
-    
-    
-    $result = $mysqli->query("select * from firma where navn like '%{$firmanavn}%' order by navn");
+    $firmaer = 'DELETE FROM firma WHERE navn= "'.$firmanavn.'";';
+    //echo $firmaer;
 
-    while($row = $result->fetch_assoc()){
-        echo " ";
-        echo "Orgnummer: ", $row["orgnummer"], "<br>", "Firmanavn: ", $row["navn"], "<br>", "Adresse: ", $row["adresse"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Postnummer: ", $row["postnummer"], "<br>";
-        echo "<br>";
-    }
+    
+    
+    $result = $mysqli->query($firmaer);
+    echo "Firmaen " .$firmanavn. " er slettet!";
+
+    
     
 
     // Check connection

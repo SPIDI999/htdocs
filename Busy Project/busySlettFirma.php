@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Søk Firma</title>
+    <title>Busy Project, Slett Firma</title>
 
     <style>
 
@@ -36,47 +36,21 @@
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <a href="busyPerson.php">Insert Person</a>
         <a href="busyFirma.php">Insert Firma</a>
-        <a href="busySokFirma.php">Søk Firma</a>
-        <a href="busySlettFirma.php">Slett Firma</a>
+        <a href="busySokPerson.php">Søk Person</a>
         <a href="busySlettPerson.php">Slett Person</a>
     </header>
 
     <section>
         <article>
-            <form action="busySokFirmaResultat.php" method="POST">
-            <h1>Finn firmaen din </h1>
+            <form action="busySlettFirmaResultat.php" method="POST">
+            <h1>Slett firma</h1>
             <input type="text" name="firmanavn" required>
-            <input type="submit" name="submit" value="Søk">
+            <input type="submit" name="submit" value="Slett">
         </article>
     </section>
 
-
-    <br><?php
-    
-    $firmanavn = $_POST["firmanavn"];
-    $mysqli = new mysqli("localhost","root","","tsb");
-
-    
-    
-    $result = $mysqli->query("select * from firma where navn like '%{$firmanavn}%' order by navn");
-
-    while($row = $result->fetch_assoc()){
-        echo " ";
-        echo "Orgnummer: ", $row["orgnummer"], "<br>", "Firmanavn: ", $row["navn"], "<br>", "Adresse: ", $row["adresse"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Postnummer: ", $row["postnummer"], "<br>";
-        echo "<br>";
-    }
     
 
-    // Check connection
-    if ($mysqli -> connect_error) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-        exit();
-    }
-    
-    
-
-    
-    ?></br>
     
 
 

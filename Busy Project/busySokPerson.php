@@ -37,6 +37,8 @@
         <a href="busyPerson.php">Insert Person</a>
         <a href="busyFirma.php">Insert Firma</a>
         <a href="busySokFirma.php">Søk Firma</a>
+        <a href="busySlettFirma.php">Slett Firma</a>
+        <a href="busySlettPerson.php">Slett Person</a>
     </header>
 
     <section>

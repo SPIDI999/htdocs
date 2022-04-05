@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Insert Firma</title>
+    <title>Busy Project, Søk Firma</title>
 
     <style>
 
@@ -37,6 +37,8 @@
         <a href="busyPerson.php">Insert Person</a>
         <a href="busyFirma.php">Insert Firma</a>
         <a href="busySokFirma.php">Søk Firma</a>
+        <a href="busySlettFirma.php">Slett Firma</a>
+        <a href="busySlettPerson.php">Slett Person</a>
     </header>
 
     <section>
@@ -60,6 +62,7 @@
     while($row = $result->fetch_assoc()){
         echo " ";
         echo "FirmaID: ", $row["firma_id"], "<br>", "Fornavn: ", $row["fornavn"], "<br>", "Etternavn: ", $row["etternavn"], "<br>", "Telefon: ", $row["telefon"], "<br>", "Epost: ", $row["epost"], "<br>";
+        echo "<br>";
     }
     //HERE BITCHES
 
