@@ -38,6 +38,7 @@
         <a href="busyFirma.php">Insert Firma</a>
         <a href="busySokPerson.php">Søk Person</a>
         <a href="busySlettFirma.php">Slett Firma</a>
+        <a href="busyUpdateFirma.php">Oppdater Person</a>
     </header>
 
     <section>

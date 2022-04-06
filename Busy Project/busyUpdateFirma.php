@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Insert Firma</title>
+    <title>Busy Project, Oppdater Firma</title>
 
     <style>
 
@@ -34,18 +34,18 @@
     <header>
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
+        <a href="busyFirma.php">Insert Firma</a>
         <a href="busyPerson.php">Insert Person</a>
         <a href="busySokFirma.php">Søk Firma</a>
         <a href="busySokPerson.php">Søk Person</a>
         <a href="busySlettFirma.php">Slett Firma</a>
         <a href="busySlettPerson.php">Slett Person</a>
-        <a href="busyUpdateFirma.php">Oppdater Person</a>
     </header>
 
     <section>
         <article>
-            <form action="busyFirmaResultat.php" method="POST">
-            <h1>Legg til dine firma-personalia </h1>
+            <form action="busyUpdateFirmaResultat.php" method="POST">
+            <h1>Oppdater firmaet ditt</h1>
             <br>Firma Navn</br>
             <input type="text" name="navn" required>
             <br>Adresse</br>
@@ -56,7 +56,28 @@
             <input type="text" name="telefon" required>
             <br>Epost</br>
             <input type="text" name="postnummer" required></br>
-            <input type="submit" name="submit" value="Send inn">
+            <input type="submit" name="submit" value="Oppdater">
+
+            <select name="firma">
+            <?php
+            $mysqli = new mysqli("localhost","root","","tsb");
+
+            if ($mysqli -> connect_error) {
+                echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+                exit();}
+    
+            $query = "SELECT `id`, `navn` FROM `firma`";
+
+            $result = $mysqli->query($query);
+
+                    if($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
+                        }
+                    }
+            ?>
+            </select>
+
         </article>
     </section>
 
