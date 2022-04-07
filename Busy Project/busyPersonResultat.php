@@ -39,12 +39,13 @@
         <a href="busySokPerson.php">Søk Person</a>
         <a href="busySlettFirma.php">Slett Firma</a>
         <a href="busySlettPerson.php">Slett Person</a>
-        <a href="busyUpdateFirma.php">Oppdater Person</a>
+        <a href="busyUpdateFirma.php">Oppdater Firma</a>
+        <a href="busyUpdatePerson.php">Oppdater Person</a>
     </header>
 
     <section>
         <article>
-            <form action="busyPerson.php" method="POST">
+            <form action="busyPersonResultat.php" method="POST">
             <h1>Legg til dine personalia</h1>
             <br>Fornavn</br>
             <input type="text" name="fornavn" required>

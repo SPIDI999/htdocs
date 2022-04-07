@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Busy Project, Oppdater Firma</title>
+        <title>Busy Project, Oppdater Person</title>
 
         <style>
 
@@ -40,7 +40,7 @@
             <a href="busySokPerson.php">Søk Person</a>
             <a href="busySlettFirma.php">Slett Firma</a>
             <a href="busySlettPerson.php">Slett Person</a>
-            <a href="busyUpdatePerson.php">Oppdater Person</a>
+            <a href="busyUpdateFirma.php">Oppdater Firma</a>
         </header>
 
         <section>
@@ -54,16 +54,16 @@
         
                 }
 
-                if (isset($_POST["navn"]) && isset($_POST["adresse"]) && isset($_POST["orgnummer"]) && isset($_POST["telefon"]) && isset($_POST["postnummer"])){
+                if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"])){
                 
-                    $navn = $_POST["navn"];             echo $navn . ", ";
-                    $adresse = $_POST["adresse"];       echo $adresse . ", ";
-                    $orgnummer = $_POST["orgnummer"];   echo $orgnummer . ", ";
+                    $fornavn = $_POST["fornavn"];       echo $fornavn . ", ";
+                    $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
                     $telefon = $_POST["telefon"];       echo $telefon . ", ";
-                    $postnummer = $_POST["postnummer"]; echo $postnummer . " ";
-                    $firma = $_POST["firma"];
+                    $epost = $_POST["epost"];           echo $epost . " ";
+                    $personer = $_POST["personer"];
                 
-                    $query = "UPDATE `firma` SET navn = '$navn', adresse = '$adresse', orgnummer = '$orgnummer', telefon = '$telefon', postnummer = '$postnummer' WHERE id = $firma";
+                    $query = "UPDATE `personer` SET fornavn = '$fornavn', etternavn = '$etternavn', telefon = '$telefon', epost = '$epost' WHERE id = $personer";
+                    
 
                     if ($mysqli->query($query) == TRUE) {
                         header("Location: ".$_SERVER['PHP_SELF']);
@@ -73,30 +73,28 @@
                 }
             ?>
             <article>
-                <form action="busyUpdateFirmaResultat.php" method="POST">
-                    <h1>Oppdater firma</h1>
-                    <br>Firma Navn</br>
+                <form action="busyUpdatePersonResultat.php" method="POST">
+                    <h1>Oppdater personalia dine</h1>
+                    <br>Fornavn</br>
                     <input type="text" name="navn" required>
-                    <br>Adresse</br>
-                    <input type="text" name="adresse" required>
-                    <br>Organisasjonsnummer</br>
-                    <input type="text" name="orgnummer" required>
+                    <br>Etternavn</br>
+                    <input type="text" name="etternavn" required>
                     <br>Telefon</br>
                     <input type="text" name="telefon" required>
-                    <br>Postnummer</br>
-                    <input type="text" name="postnummer" required></br>
+                    <br>Epost</br>
+                    <input type="text" name="epost" required></br>
                     <input type="submit" name="submit" value="Oppdater">
 
-                    <select name="firma">
+                    <select name="personer">
                         <?php
                         
-                        $query = "SELECT `id`, `navn` FROM `firma`";
+                        $query = "SELECT `id`, `fornavn`, `etternavn` FROM `personer`";
 
                         $result = $mysqli->query($query);
 
                         if($result->num_rows > 0) {
                             while($row = $result->fetch_assoc()) {
-                                echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
+                                echo "<option value='" . $row["id"] . "'>" . $row["navn"] . " " . $row["etternavn"] . "</option>";
                             }
                         }
                         ?>
