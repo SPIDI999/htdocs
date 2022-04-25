@@ -55,9 +55,26 @@
             <input type="text" name="telefon" required>
             <br>Epost</br>
             <input type="text" name="epost" required></br>
-            <!--<br>FirmaID</br>
-            <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
+            <select name="firma">
+                        <?php
+                        $mysqli = new mysqli("localhost","root","","tsb");
+
+                        if ($mysqli -> connect_error) {
+                            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+                            exit();}
+                        
+                        $query = "SELECT `id`, `navn` FROM `firma`";
+
+                        $result = $mysqli->query($query);
+
+                        if($result->num_rows > 0) {
+                            while($row = $result->fetch_assoc()) {
+                                echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
+                            }
+                        }
+                        ?>
+                    </select>
         </article>
     </section>
 

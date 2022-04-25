@@ -1,3 +1,4 @@
+<?php require "./SQL.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,43 +56,38 @@
             <input type="text" name="telefon" required>
             <br>Epost</br>
             <input type="text" name="epost" required></br>
-            <!--<br>FirmaID</br>
-            <input type="text" name="firmaid" required></br>-->
             <input type="submit" name="submit" value="Send inn"> 
+            <select name="firma">
+            <?php        
+                $query = "SELECT `id`, `navn` FROM `firma`";
+
+                $result = $mysqli->query($query);
+
+                if($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
+                    }
+                }
+            ?>
+            </select>
         </article>
     </section>
 
-    <br><?php
+    </br>
 
-        if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"])){
-
+    <?php
+        if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"]) && isset($_POST["firma"])){
+            $fornavn = $_POST["fornavn"];       echo $fornavn . " ";
+            $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
+            $telefon = $_POST["telefon"];       echo $telefon . ", ";
+            $epost = $_POST["epost"];           echo $epost . ", ";
+            $firma = $_POST["firma"];           echo $firma . " ";
             
-        $fornavn = $_POST["fornavn"];       echo $fornavn . " ";
-        $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
-        $telefon = $_POST["telefon"];       echo $telefon . ", ";
-        $epost = $_POST["epost"];           echo $epost . ", ";
-        #$firma_id = $_POST["firma_id"];     echo $firma_id . " ";
+            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost, firma_id) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'","'.$firma.'")';
 
-            $mysqli = new mysqli("localhost","root","","tsb");
-            $personer = 'INSERT INTO personer (fornavn, etternavn, telefon, epost) VALUES("'.$fornavn.'","'.$etternavn.'","'.$telefon.'","'.$epost.'")';
-
-            $result = $mysqli->query($personer);
-
-        // Check connection
-        if ($mysqli -> connect_error) {
-            echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-            exit();}
-
+            $mysqli->query($personer);
         }
-
-     
-
-
-    
-    
-
-    ?></br>
-
+    ?>
 
 </body>
 </html>

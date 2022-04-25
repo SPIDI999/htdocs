@@ -56,10 +56,10 @@
 
                 if (isset($_POST["fornavn"]) && isset($_POST["etternavn"]) && isset($_POST["telefon"]) && isset($_POST["epost"])){
                 
-                    $fornavn = $_POST["fornavn"];       echo $fornavn . ", ";
-                    $etternavn = $_POST["etternavn"];   echo $etternavn . ", ";
-                    $telefon = $_POST["telefon"];       echo $telefon . ", ";
-                    $epost = $_POST["epost"];           echo $epost . " ";
+                    $fornavn = $_POST["fornavn"];       
+                    $etternavn = $_POST["etternavn"];   
+                    $telefon = $_POST["telefon"];       
+                    $epost = $_POST["epost"];           
                     $personer = $_POST["personer"];
                 
                     $query = "UPDATE `personer` SET fornavn = '$fornavn', etternavn = '$etternavn', telefon = '$telefon', epost = '$epost' WHERE id = $personer";
@@ -70,13 +70,17 @@
                     } else {
                         echo 'Failed to update';
                     }
+
+                    
+
+
                 }
             ?>
             <article>
                 <form action="busyUpdatePersonResultat.php" method="POST">
                     <h1>Oppdater personalia dine</h1>
                     <br>Fornavn</br>
-                    <input type="text" name="navn" required>
+                    <input type="text" name="fornavn" required>
                     <br>Etternavn</br>
                     <input type="text" name="etternavn" required>
                     <br>Telefon</br>
