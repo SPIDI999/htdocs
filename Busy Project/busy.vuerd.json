@@ -3,9 +3,9 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -60,
-    "scrollLeft": -257,
-    "zoomLevel": 1,
+    "scrollTop": 0,
+    "scrollLeft": -1020,
+    "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
       "columnComment": true,
@@ -343,7 +343,7 @@
           "active": false,
           "left": 588.75,
           "top": 548.5,
-          "zIndex": 7,
+          "zIndex": 6,
           "widthName": 60,
           "widthComment": 60
         },
@@ -474,7 +474,7 @@
           "active": false,
           "left": 1258.25,
           "top": 629,
-          "zIndex": 6,
+          "zIndex": 5,
           "widthName": 60,
           "widthComment": 60
         },
@@ -651,7 +651,7 @@
           "active": false,
           "left": 918,
           "top": 222,
-          "zIndex": 8,
+          "zIndex": 7,
           "widthName": 60,
           "widthComment": 60
         },
@@ -753,7 +753,7 @@
             "dataType": "INT",
             "default": "",
             "option": {
-              "autoIncrement": false,
+              "autoIncrement": true,
               "primaryKey": true,
               "unique": false,
               "notNull": true
@@ -863,7 +863,7 @@
             "id": "2a85568b-3390-4f38-8847-e6a810d96c3b"
           },
           {
-            "name": "leverandør_id",
+            "name": "leverandor_id",
             "comment": "",
             "dataType": "INT",
             "default": "",
@@ -878,7 +878,7 @@
               "pk": false,
               "fk": true,
               "pfk": false,
-              "widthName": 81.4853515625,
+              "widthName": 80.7744140625,
               "widthComment": 60,
               "widthDataType": 60,
               "widthDefault": 60
@@ -890,7 +890,7 @@
           "active": false,
           "left": 1400,
           "top": 28,
-          "zIndex": 5,
+          "zIndex": 8,
           "widthName": 94.47900390625,
           "widthComment": 60
         },

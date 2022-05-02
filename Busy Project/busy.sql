@@ -24,7 +24,23 @@ CREATE TABLE Personer
   PRIMARY KEY (id)
 );
 
- ALTER TABLE Personer
-  ADD CONSTRAINT FK_Firma_TO_Personer
-    FOREIGN KEY (firma_id)
+CREATE TABLE Produktregistrer
+(
+  id                INT         NOT NULL AUTO_INCREMENT,
+  navn              VARCHAR(60) NULL    ,
+  produktbetegnelse VARCHAR(60) NULL    ,
+  pris_inn          VARCHAR(60) NULL    ,
+  pris_ut           VARCHAR(60) NULL    ,
+  leverandor_id     INT         NOT NULL,
+  PRIMARY KEY (id)
+);
+
+ALTER TABLE Personer
+ADD CONSTRAINT FK_Firma_TO_Personer
+  FOREIGN KEY (firma_id)
+  REFERENCES Firma (id);
+
+ALTER TABLE Produktregistrer
+  ADD CONSTRAINT FK_Firma_TO_Produktregistrer
+    FOREIGN KEY (leverandor_id)
     REFERENCES Firma (id);
