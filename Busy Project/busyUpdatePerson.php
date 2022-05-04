@@ -48,36 +48,27 @@
         <article>
             <form action="busyUpdatePersonResultat.php" method="POST">
             <h1>Oppdater personalia dine</h1>
-            <br>Fornavn</br>
-            <input type="text" name="fornavn" required>
-            <br>Etternavn</br>
-            <input type="text" name="etternavn" required>
-            <br>Telefon</br>
-            <input type="text" name="telefon" required>
-            <br>Epost</br>
-            <input type="text" name="epost" required></br>
-            <input type="submit" name="submit" value="Oppdater">
 
-            <select name="personer">
             <?php
-            $mysqli = new mysqli("localhost","root","","tsb");
+                $mysqli = new mysqli("localhost", "root", "", "tsb");
+                $personer = $_POST["personer"];
+                $resultat = $mysqli->query("SELECT * FROM `personer` WHERE `id` = $personer");
 
-            if ($mysqli -> connect_error) {
-                echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-                exit();}
-    
-            $query = "SELECT `id`, `fornavn`, `etternavn` FROM `personer`";
-            
+                $row = $resultat->fetch_assoc();
 
-            $result = $mysqli->query($query);
-
-                    if($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                            echo "<option value='" . $row["id"] . "'>" . $row["fornavn"] . " " . $row["etternavn"] . "</option>";
-                        }
-                    }
+                echo "<input type='hidden' name='personer' value='" . $row["id"] . "'>";
+                echo "Fornavn </br>";
+                echo "<input type='input' name='fornavn' value='" . $row["fornavn"] . "'></br>" . " ";
+                echo "Etternavn </br>";
+                echo "<input type='input' name='etternavn' value='" . $row["etternavn"] . "'></br>" . " ";
+                echo "Telefon Kunde </br>";
+                echo "<input type='input' name='telefon' value='" . $row["telefon"] . "'></br>" . " ";
+                echo "Epost </br>";
+                echo "<input type='input' name='epost' value='" . $row["epost"] . "'></br>" . " ";
+                
             ?>
-            </select>
+
+            <input type="submit" name="submit" value="Oppdater">
 
         </article>
     </section>

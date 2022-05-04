@@ -79,31 +79,10 @@
             ?>
             <article>
                 <form action="busyUpdatePersonResultat.php" method="POST">
-                    <h1>Oppdater personalia dine</h1>
-                    <br>Fornavn</br>
-                    <input type="text" name="fornavn" required>
-                    <br>Etternavn</br>
-                    <input type="text" name="etternavn" required>
-                    <br>Telefon</br>
-                    <input type="text" name="telefon" required>
-                    <br>Epost</br>
-                    <input type="text" name="epost" required></br>
-                    <input type="submit" name="submit" value="Oppdater">
+                    <h1>Personalia dine er oppdatert</h1>
+                    <a href="busyUpdatePersonVelg.php">Trykk her for å oppdatere en ny person</a>
 
-                    <select name="personer">
-                        <?php
-                        
-                        $query = "SELECT `id`, `fornavn`, `etternavn` FROM `personer`";
-
-                        $result = $mysqli->query($query);
-
-                        if($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<option value='" . $row["id"] . "'>" . $row["fornavn"] . " " . $row["etternavn"] . "</option>";
-                            }
-                        }
-                        ?>
-                    </select>
+                    
             </article>
         </section>
     </body>

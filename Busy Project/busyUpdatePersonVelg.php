@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Søk Firma</title>
+    <title>Busy Project, Oppdater Person</title>
 
     <style>
 
@@ -35,28 +35,39 @@
         <h1>Busy Prosjekt KONTAKTMODUL</h1>
         <h3><a href="../index.php">Tilbake til hovedsiden</a></h3>
         <h3><a href="ProduktRegistrer/busyProduktregistrer.php">Produktregistrer</a></h3>
-        <a href="busyPerson.php">Insert Person</a>
         <a href="busyFirma.php">Insert Firma</a>
+        <a href="busyPerson.php">Insert Person</a>
+        <a href="busySokFirma.php">Søk Firma</a>
         <a href="busySokPerson.php">Søk Person</a>
         <a href="busySlettFirma.php">Slett Firma</a>
         <a href="busySlettPerson.php">Slett Person</a>
         <a href="busyUpdateFirma.php">Oppdater Firma</a>
-        <a href="busyUpdatePersonVelg.php">Oppdater Person</a>
     </header>
 
     <section>
         <article>
-            <form action="busySokFirmaResultat.php" method="POST">
-            <h1>Finn firmaen din </h1>
-            <input type="text" name="firmanavn" required>
-            <input type="submit" name="submit" value="Søk">
+            <form action="busyUpdatePerson.php" method="POST">
+            <h1>Velg personen du har lyst å oppdatere</h1>
+                <select name="personer">
+            
+                <?php
+                    $mysqli = new mysqli("localhost", "root", "", "tsb");
+
+                    $result = $mysqli->query("SELECT `id`, `fornavn`, `etternavn` FROM `personer`");
+
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["id"] . "'>" . $row["fornavn"] . " " . $row["etternavn"] . "</option>";
+                    }
+                ?>
+
+                </select>
+            <input type="submit" name="submit" value="Velg">
         </article>
     </section>
-
-    
 
     
 
 
 </body>
 </html>
+

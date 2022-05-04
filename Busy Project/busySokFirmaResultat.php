@@ -41,7 +41,7 @@
         <a href="busySlettFirma.php">Slett Firma</a>
         <a href="busySlettPerson.php">Slett Person</a>
         <a href="busyUpdateFirma.php">Oppdater Firma</a>
-        <a href="busyUpdatePerson.php">Oppdater Person</a>
+        <a href="busyUpdatePersonVelg.php">Oppdater Person</a>
     </header>
 
     <section>
