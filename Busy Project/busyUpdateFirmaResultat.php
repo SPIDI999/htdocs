@@ -75,32 +75,9 @@
             ?>
             <article>
                 <form action="busyUpdateFirmaResultat.php" method="POST">
-                    <h1>Oppdater firma</h1>
-                    <br>Firma Navn</br>
-                    <input type="text" name="navn" required>
-                    <br>Adresse</br>
-                    <input type="text" name="adresse" required>
-                    <br>Organisasjonsnummer</br>
-                    <input type="text" name="orgnummer" required>
-                    <br>Telefon</br>
-                    <input type="text" name="telefon" required>
-                    <br>Postnummer</br>
-                    <input type="text" name="postnummer" required></br>
-                    <input type="submit" name="submit" value="Oppdater">
-
-                    <select name="firma">
-                        <?php
-                        
-                        $query = "SELECT `id`, `navn` FROM `firma`";
-
-                        $result = $mysqli->query($query);
-
-                        if($result->num_rows > 0) {
-                            while($row = $result->fetch_assoc()) {
-                                echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
-                            }
-                        }
-                        ?>
+                    <h1>Firmaet ditt er oppdatert</h1>
+                    <a href="busyUpdateFirmaVelg.php">Trykk her for å oppdatere en ny person</a>
+                    
                     </select>
             </article>
         </section>

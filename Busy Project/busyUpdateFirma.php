@@ -48,37 +48,29 @@
         <article>
             <form action="busyUpdateFirmaResultat.php" method="POST">
             <h1>Oppdater firmaet ditt</h1>
-            <br>Firma Navn</br>
-            <input type="text" name="navn" required>
-            <br>Adresse</br>
-            <input type="text" name="adresse" required>
-            <br>Organisasjonsnummer</br>
-            <input type="text" name="orgnummer" required>
-            <br>Telefon</br>
-            <input type="text" name="telefon" required>
-            <br>Epost</br>
-            <input type="text" name="postnummer" required></br>
-            <input type="submit" name="submit" value="Oppdater">
-
-            <select name="firma">
+            
             <?php
-            $mysqli = new mysqli("localhost","root","","tsb");
+                $mysqli = new mysqli("localhost", "root", "", "tsb");
+                $firma = $_POST["firma"];
+                $resultat = $mysqli->query("SELECT * FROM `firma` WHERE `id` = $firma");
 
-            if ($mysqli -> connect_error) {
-                echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-                exit();}
-    
-            $query = "SELECT `id`, `navn` FROM `firma`";
+                $row = $resultat->fetch_assoc();
 
-            $result = $mysqli->query($query);
-
-                    if($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                            echo "<option value='" . $row["id"] . "'>" . $row["navn"] . "</option>";
-                        }
-                    }
+                echo "<input type='hidden' name='firma' value='" . $row["id"] . "'>";
+                echo "Firma Navn </br>";
+                echo "<input type='input' name='navn' value='" . $row["navn"] . "'></br>" . " ";
+                echo "Adresse </br>";
+                echo "<input type='input' name='adresse' value='" . $row["adresse"] . "'></br>" . " ";
+                echo "Organisasjonsnummer </br>";
+                echo "<input type='input' name='orgnummer' value='" . $row["orgnummer"] . "'></br>" . " ";
+                echo "Telefon </br>";
+                echo "<input type='input' name='telefon' value='" . $row["telefon"] . "'></br>" . " ";
+                echo "Epost </br>";
+                echo "<input type='input' name='postnummer' value='" . $row["postnummer"] . "'></br>" . " ";
+                
             ?>
-            </select>
+
+            <input type="submit" name="submit" value="Oppdater">
 
         </article>
     </section>

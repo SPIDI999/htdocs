@@ -41,7 +41,7 @@
             <a href="busySokPerson.php">Søk Person</a>
             <a href="busySlettFirma.php">Slett Firma</a>
             <a href="busySlettPerson.php">Slett Person</a>
-            <a href="busyUpdateFirma.php">Oppdater Firma</a>
+            <a href="busyUpdateFirmaVelg.php">Oppdater Firma</a>
         </header>
 
         <section>
