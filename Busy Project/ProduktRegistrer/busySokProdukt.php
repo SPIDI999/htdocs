@@ -45,7 +45,12 @@
         <article>
             <form action="busySokProduktResultat.php" method="POST">
             <h1>Finn varen din</h1>
-            <input type="text" name="varenavn" required>
+            <br>Produkt Navn</br>
+            <input type="text" name="varenavn">
+            <br>Produktbetegnelse</br>
+            <input type="text" name="produktbetegnelse">
+            <br>Leverandør ID</br>
+            <input type="text" name="leverandor_id"></br>
             <input type="submit" name="submit" value="Søk">
         </article>
     </section>
