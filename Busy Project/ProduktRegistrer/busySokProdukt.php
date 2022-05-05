@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Slett vare</title>
+    <title>Busy Project, Finn varen din</title>
 
     <style>
 
@@ -37,45 +37,20 @@
         <h3><a href="../../index.php">Tilbake til hovedsiden</a></h3>
         <h3><a href="../busyFirma.php">Kontaktmodul</a></h3>
         <a href="busyProduktregistrer.php">Insert vare</a>
-        <a href="busySokProdukt.php">Finn varen din</a>
+        <a href="busySlettProdukt.php">Slett varen din</a>
 
     </header>
 
     <section>
         <article>
-            <form action="busySlettProduktResultat.php" method="POST">
-            <h1>Slett varen din</h1>
+            <form action="busySokProduktResultat.php" method="POST">
+            <h1>Finn varen din</h1>
             <input type="text" name="varenavn" required>
-            <input type="submit" name="submit" value="Slett">
+            <input type="submit" name="submit" value="Søk">
         </article>
     </section>
 
-    <br><?php
     
-    $varenavn = $_POST["varenavn"];
-    $mysqli = new mysqli("localhost","root","","tsb");
-
-    $produktregistrer = 'DELETE FROM produktregistrer WHERE navn= "'.$varenavn.'";';
-    
-
-    
-    
-    $result = $mysqli->query($produktregistrer);
-    echo "Personen " .$varenavn. " er slettet!";
-
-    
-    
-
-    // Check connection
-    if ($mysqli -> connect_error) {
-        echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-        exit();
-    }
-    
-    
-
-    
-    ?></br>
 
     
 

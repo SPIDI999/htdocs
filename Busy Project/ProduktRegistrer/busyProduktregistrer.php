@@ -35,6 +35,8 @@
         <h1>Busy Prosjekt Produkt/vareregister</h1>
         <h3><a href="../../index.php">Tilbake til hovedsiden</a></h3>
         <h3><a href="../busyFirma.php">Kontaktmodul</a></h3>
+        <a href="busySlettProdukt.php">Slett varen din</a>
+        <a href="busySokProdukt.php">Finn varen din</a>
         
     </header>
 
