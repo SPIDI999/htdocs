@@ -38,6 +38,7 @@
         <h3><a href="../busyFirma.php">Kontaktmodul</a></h3>
         <a href="busySlettProdukt.php">Slett varen din</a>
         <a href="busySokProdukt.php">Finn varen din</a>
+        <a href="busyUpdateProduktVelg.php">Oppdater produktet ditt</a>
 
     </header>
 

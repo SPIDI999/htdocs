@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Busy Project, Finn varen din</title>
+    <title>Busy Project, Oppdater varen din</title>
 
     <style>
 
@@ -38,28 +38,34 @@
         <h3><a href="../busyFirma.php">Kontaktmodul</a></h3>
         <a href="busyProduktregistrer.php">Insert vare</a>
         <a href="busySlettProdukt.php">Slett varen din</a>
-        <a href="busyUpdateProduktVelg.php">Oppdater produktet ditt</a>
+        <a href="busySokProdukt.php">Finn varen din</a>
 
     </header>
 
     <section>
         <article>
-            <form action="busySokProduktResultat.php" method="POST">
-            <h1>Finn varen din</h1>
-            <br>Produkt Navn</br>
-            <input type="text" name="varenavn">
-            <br>Produktbetegnelse</br>
-            <input type="text" name="produktbetegnelse">
-            <br>Leverandør ID</br>
-            <input type="text" name="leverandor_id"></br>
-            <input type="submit" name="submit" value="Søk">
+            <form action="busyUpdateProdukt.php" method="POST">
+            <h1>Velg varen du har lyst å oppdatere</h1>
+                <select name="personer">
+            
+                <?php
+                    $mysqli = new mysqli("localhost", "root", "", "tsb");
+
+                    $result = $mysqli->query("SELECT `id`, `navn`, `produktbetegnelse` FROM `produktregistrer`");
+
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='" . $row["id"] . "'>" . $row["navn"] . " " . $row["produktbetegnelse"] . "</option>";
+                    }
+                ?>
+
+                </select>
+            <input type="submit" name="submit" value="Velg">
         </article>
     </section>
-
-    
 
     
 
 
 </body>
 </html>
+
