@@ -46,7 +46,7 @@
         <article>
             <form action="busyUpdateProdukt.php" method="POST">
             <h1>Velg varen du har lyst å oppdatere</h1>
-                <select name="personer">
+                <select name="produktregistrer">
             
                 <?php
                     $mysqli = new mysqli("localhost", "root", "", "tsb");
